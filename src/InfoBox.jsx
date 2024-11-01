@@ -5,24 +5,14 @@ import Typography from '@mui/material/Typography';
 import "./InfoBox.css";
 
 
-export default function InfoBox() {
+export default function InfoBox({info}) {
 
     const INIT_URL = "https://images.unsplash.com/photo-1695697478813-9cd8058712e7?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmVhdXRpZnVsJTIwd2VhdGhlcnxlbnwwfHwwfHx8MA%3D%3D";
 
-    let info = {
-        feelslike: 24.04,
-        temp: 25.05,
-        tempMin: 25.05,
-        tempMax: 25.05,
-        humidity: 47,
-        weather: "haze",
-    };
-
     return (
         <div className="InfoBox">
-            <h3>WeatherInfo</h3>
-
-            <Card sx={{ maxWidth: 345 }}>
+        <div className='cardContainer'>
+    <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         sx={{ height: 140 }}
         image={INIT_URL}
@@ -43,6 +33,7 @@ export default function InfoBox() {
         </Typography>
       </CardContent>
     </Card>
-        </div>
+    </div>
+    </div>
     )
 }
